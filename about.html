@@ -53,8 +53,8 @@
                         <div class="main-menu d-none d-lg-block">
                             <nav> 
                                 <ul id="navigation">                                                                                          
-                                    <li class="active"><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li class="active"><a href="about.html">About</a></li>
                                     <li><a href="services.html">Services</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
@@ -101,24 +101,48 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12">
-                        <div class="about-caption mb-50">
-                            <!-- Section Tittle -->
-                            <div class="section-tittle mb-25">
-                                <h2>About company</h2>
-                            </div>
-                            <p class="mb-20">
-                            Laundrius is a modern, reliable laundry service designed to make your life easier. We understand that your time is valuable, which is why we offer a convenient <b>pick-up and drop-off service</b>, bringing professional laundry care straight to your doorstep.
+                    <div class="about-caption mb-50">
 
-                            Laundrius is a modern, reliable laundry service designed to make your life easier. We understand that your time is valuable, which is why we offer a convenient <b>pick-up and drop-off service</p>, bringing professional laundry care straight to your doorstep.
-                            <p class="mb-30">We handle both <b>cloth and leather garments</b> with the attention and expertise they deserve. From everyday wear to delicate and premium items, our team uses the right techniques and products to ensure excellent results. After washing, every item is <b>neatly ironed and folded</b>, ready to wear or store.
-
-                            In addition to regular laundry, Laundrius also provides <b>professional dry cleaning services</b>, ideal for delicate fabrics and special garments that require extra care.
-
-                            At Laundrius, cleanliness, quality, and convenience come first. We are committed to delivering fresh, spotless, and well-finished laundry you can trust—every time.</p>
-
-                            <a href="about.html" class="btn">About Us</a>
+                        <!-- Section Title -->
+                        <div class="section-tittle mb-25">
+                            <h2>About Company</h2>
                         </div>
+
+                        <div class="about-text">
+                            <p class="short-text mb-20">
+                                Laundrius is a modern, reliable laundry service designed to make your life easier. 
+                                We understand that your time is valuable, which is why we offer a convenient 
+                                <b>pick-up and drop-off service</b>, bringing professional laundry care straight 
+                                to your doorstep.
+                            </p>
+
+                            <div class="more-text">
+                                <p class="mb-20">
+                                    We handle both <b>cloth and leather garments</b> with the attention and expertise 
+                                    they deserve. From everyday wear to delicate and premium items, our team uses 
+                                    the right techniques and products to ensure excellent results.
+                                </p>
+
+                                <p class="mb-20">
+                                    After washing, every item is <b>neatly ironed and folded</b>, ready to wear or store. 
+                                    In addition to regular laundry, Laundrius also provides 
+                                    <b>professional dry cleaning services</b> for delicate fabrics.
+                                </p>
+
+                                <p class="mb-30">
+                                    At Laundrius, cleanliness, quality, and convenience come first. We are committed 
+                                    to delivering fresh, spotless, and well-finished laundry you can trust—every time.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Read More Button -->
+                        <a href="javascript:void(0)" class="btn read-more-btn" onclick="toggleReadMore(this)">
+                            Read More
+                        </a>
                     </div>
+                </div>
+
                 </div>
             </div>
         </section>
@@ -361,6 +385,18 @@
 <!-- Jquery Plugins, main Jquery -->	
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
+<script>
+function toggleReadMore(btn) {
+    const moreText = btn.previousElementSibling.querySelector('.more-text');
 
+    if (moreText.style.display === "block") {
+        moreText.style.display = "none";
+        btn.innerText = "Read More";
+    } else {
+        moreText.style.display = "block";
+        btn.innerText = "Read Less";
+    }
+}
+        </script>
 </body>
 </html>
